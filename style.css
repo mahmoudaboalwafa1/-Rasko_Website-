@@ -1,0 +1,130 @@
+/* start global rules */
+:root {
+  --main-color: #00bd7f;
+  --main-transition: 0.6s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  height: 2000vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* end global rules */
+
+/* start header */
+header {
+  background-color: #434955;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.row {
+  margin: 0;
+}
+
+.menu-icon {
+  display: none;
+}
+
+header a {
+  color: white;
+  padding: 0 20px;
+  white-space: nowrap;
+  font-size: 25px;
+  transition: var(--main-transition);
+}
+
+header a:hover {
+  color: var(--main-color);
+}
+
+ul.head,
+nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1182px) {
+  ul.head,
+  nav a{
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    color: white;
+    position: absolute;
+    font-size: 35px;
+    padding-left: 25px;
+  }
+}
+
+ul.head {
+  width: 50%;
+}
+
+ul.head li {
+  padding-top: 15px;
+}
+
+ul.head a {
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding-top: 35px;
+  padding-left: 40px;
+  height: 97px;
+  transition: var(--main-transition);
+}
+
+ul.head a:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+ul.head a:hover::after {
+  display: block;
+}
+
+ul.head li:not(:last-of-type) a::before {
+  content: "\f0dd";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+img.main-img {
+  height: 125px;
+  width: 130px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+/* start header */
