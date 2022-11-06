@@ -62,7 +62,7 @@ header a:hover {
 
 ul.head,
 nav {
-  height: 70px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -71,6 +71,10 @@ nav {
   ul.head,
   nav a{
     display: none;
+  }
+
+  header {
+    height: 98px;
   }
 
   .menu-icon {
@@ -97,7 +101,7 @@ ul.head a {
   display: block;
   padding-top: 35px;
   padding-left: 40px;
-  height: 97px;
+  height: 87px;
   transition: var(--main-transition);
 }
 
