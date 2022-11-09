@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Blog</title>
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap"
+    />
     <!-- file all for icon font awesome -->
     <link rel="stylesheet" href="./css/all.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <!-- file bootstrap.min for bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- style file for css main -->
@@ -22,22 +30,96 @@
   <body>
     <!-- start navbar -->
     <header class="row">
-      <i class="far fa-stream mopile menu-icon"></i>
-      <nav class="col-4">
+      <i class="far fa-stream mopile menu-icon" id="icon"></i>
+      <nav class="col-4" id="nav">
         <a href="#"><i class="fas fa-random"></i></a>
         <a href="#"><i class="fas fa-adjust"></i></a>
         <a href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
         <a href="#"><i class="fas fa-user-circle"></i></a>
         <a href="#">+ تابعنا</a>
       </nav>
-      <ul class="head col-4">
-        <li><a href="#">قواعد البيانات</a></li>
-        <li><a href="#">تكنولوجيا</a></li>
-        <li><a href="#">المزيد</a></li>
-        <li><a href="#">العاب</a></li>
+      <ul class="head col-4" id="head">
+        <li>
+          <i id="cancel" class="far fa-times cancel"></i>
+          <a href="#">قواعد البيانات </a>
+          <ul class="sides">
+            <a href="#" class="side"
+              ><span>العاب</span> <i class="fas fa-gamepad"></i
+            ></a>
+          </ul>
+        </li>
+        <li>
+          <a href="#">تكنولوجيا</a>
+          <ul class="sides">
+            <a href="#" class="side"><span>سوفت وير</span></a>
+            <a href="#" class="side"><span>هارد وير</span></a>
+          </ul>
+        </li>
+        <li>
+          <a href="#">المزيد</a>
+          <ul class="sides">
+            <a href="#" class="side"><span>رياضيات الكترونية</span></a>
+          </ul>
+        </li>
+        <li>
+          <a href="#">العاب</a>
+        </li>
+        <div class="social">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-discord"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
       </ul>
-      <img src="./static/icon.png" class="main-img" alt="iconhead">
+      <img src="./static/icon.png" class="main-img" alt="iconhead" />
     </header>
     <!-- end navbar -->
+
+    <!-- start main -->
+    <main>
+      <i class="fas fa-chevron-left left"></i>
+      <div class="boxes">
+        <div class="box">
+          <div class="opacity"></div>
+          <img src="./static/call-of-duty-vanguard.jpeg" alt="img-game" />
+          <p>التحديث المليء بالمفاجئات في لعبه Call Of Duty</p>
+          <span>منذ 21 ساعة</span>
+        </div>
+        <div class="box">
+          <div class="opacity"></div>
+          <img src="./static/1-9-780x470.jpg" alt="img-game" />
+          <p>ما الجديد الان في PUBG Mobile تم اصدرا تحديث 2021</p>
+          <span>منذ 21 ساعة</span>
+        </div>
+        <div class="box">
+          <div class="opacity"></div>
+          <img src="./static/cover-780x470.jpg" alt="img-game" />
+          <p>الكشف عن رميمك في Destroy All Humans 2</p>
+          <span>منذ 21 ساعة</span>
+        </div>
+        <div class="box">
+          <div class="opacity"></div>
+          <img
+            src="./static/How-to-get-FIFA-22-closed-beta-codes-780x470.jpeg"
+            alt="img-game"
+          />
+          <p>تحديث مليء بالمفاجئات في لعبه FIFA 2021</p>
+          <span>منذ 21 ساعة</span>
+        </div>
+        <div class="box">
+          <div class="opacity"></div>
+          <img
+            src="./static/WCCFwuchangfallenfeathers1-780x470.jpg"
+            alt="img-game"
+          />
+          <p>تحديث 1.6.0 في لعبة PUBG MOBILE مليء بالمفاجئات</p>
+          <span>منذ 21 ساعة</span>
+        </div>
+      </div>
+      <i class="fas fa-chevron-right right"></i>
+    </main>
+    <!-- end main -->
+    <script src="./main.js"></script>
   </body>
 </html>
