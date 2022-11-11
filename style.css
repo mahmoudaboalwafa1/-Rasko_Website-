@@ -12,7 +12,12 @@
 }
 
 body {
-  height: 2000vh;
+  background-color: #27292d;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -31,7 +36,7 @@ a {
   text-decoration: none;
 }
 
-div.container {
+.container {
   padding: 0 30px;
   margin: 0;
 }
@@ -87,6 +92,16 @@ ul.sides {
   background-color: #434955;
 }
 
+ul.sides::before {
+  content: "";
+  background-color: var(--main-color);
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 div.social {
   display: none;
 }
@@ -103,12 +118,14 @@ div.social {
 
   .menu-icon {
     display: block;
-    color: white;
     cursor: pointer;
-    position: absolute;
     font-size: 35px;
     padding-left: 25px;
     opacity: 1;
+  }
+
+  ul.sides::before {
+    display: none;
   }
 }
 
@@ -212,7 +229,6 @@ i.cancel {
   transform: translateX(-50%);
   position: absolute;
   color: white;
-  text-align: center;
   cursor: pointer;
   font-size: 40px;
   transition: var(--main-transition);
@@ -377,7 +393,6 @@ i.cancel:hover {
 
 /* start main */
 main {
-  background-color: #27292d;
   position: relative;
 }
 
@@ -416,7 +431,6 @@ div.box:hover img {
 
 div.box img {
   width: 100%;
-  max-width: 100%;
   height: 800px;
   transition: var(--main-transition);
 }
@@ -425,7 +439,7 @@ div.box:nth-child(1) {
   grid-area: box1;
 }
 
-div.box:not(:nth-child(2)) img {
+div.box img {
   height: 100%;
 }
 
@@ -473,7 +487,36 @@ div.box:nth-child(2) p {
   }
 }
 
-@media (max-width: 1064px) {
+@media (max-width: 768px) {
+  div.boxes {
+    grid-template-areas:
+      "box2 box2 box2 box2 box2 box2 box2 box2"
+      "box2 box2 box2 box2 box2 box2 box2 box2"
+      "box1 box1 box1 box1 box3 box3 box3 box3"
+      "box4 box4 box4 box4 box5 box5 box5 box5";
+  }
+
+  div.box p {
+    font-size: 10px;
+    line-height: 15px;
+    white-space: wrap;
+    right: 4px;
+    bottom: 0;
+  }
+
+  div.box:nth-child(2) p {
+    font-size: 20px;
+    bottom: 20px;
+    line-height: 25px;
+  }
+
+  div.box span {
+    font-size: 14px;
+    right: 4px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1064px) {
   div.boxes {
     grid-template-areas:
       "box2 box2 box2 box2 box2 box2 box2 box2"
@@ -509,6 +552,7 @@ div.box:nth-child(3) {
 
 div.box:nth-child(4) {
   grid-area: box4;
+  z-index: 2;
 }
 div.box:nth-child(5) {
   grid-area: box5;
@@ -519,16 +563,23 @@ i.left {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 15px;
-  z-index: 6;
-  height: 60px;
+  z-index: 500;
+  height: 70px;
   width: 50px;
+  top: 300px;
   display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 300px;
   transition: var(--main-transition);
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  i.right,
+  i.left {
+    top: calc(50% - 100px);
+  }
 }
 
 i.left {
@@ -539,12 +590,362 @@ i.right {
   right: 10px;
 }
 
-main:hover i {
+main:hover i,
+div.gtav:hover i {
   display: flex;
 }
 
-main i:hover {
+main i:hover,
+div.gtav i:hover {
   background-color: var(--main-color);
 }
 
 /* end main */
+
+/* start section ads */
+
+section.ads {
+  padding: 70px 30px;
+}
+
+div.games {
+  display: grid;
+  grid-template-areas: "cry gtav gtav gtav";
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  div.games {
+    grid-template-areas: "gtav gtav gtav" "cry cry cry";
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+div.farcry {
+  grid-area: cry;
+}
+
+div.gtav {
+  grid-area: gtav;
+}
+
+section.ads img {
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  position: relative;
+}
+
+div.farcry img {
+  height: 48%;
+  margin-left: -17px;
+  width: calc(100% + 20px);
+}
+
+section.ads h1 {
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  width: 120px;
+  background-color: black;
+  margin-left: auto;
+  padding: 10px;
+  text-align: right;
+  position: relative;
+}
+
+section.ads h1::before {
+  content: "";
+  background-color: #27292d;
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 18px);
+  top: 4px;
+  left: -100px;
+  transform: rotate(-20deg);
+}
+
+div.farcry h1:last-of-type {
+  width: 200px;
+}
+
+@media (max-width: 992px) {
+  div.farcry h1:last-of-type {
+    width: 221px;
+  }
+}
+
+div.farcry h1:last-of-type:before {
+  height: calc(100% + 189px);
+  left: -152px;
+  top: -22px;
+  transform: rotate(-106deg);
+}
+
+ul.soc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px 0;
+  padding-right: 10px;
+}
+
+ul.soc li:first-of-type {
+  flex-basis: 48%;
+}
+
+ul.soc li:nth-child(2) {
+  flex-basis: 47%;
+}
+
+ul.soc li:nth-child(3) {
+  flex-basis: 100%;
+}
+
+@media (max-width: 992px) {
+  ul.soc {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul.soc p {
+    padding-right: 300px;
+  }
+}
+
+ul.soc li {
+  background-color: #4080ff;
+  z-index: 33;
+  position: relative;
+  display: flex;
+  padding-bottom: 5px;
+  transition: var(--main-transition);
+}
+
+ul.soc li:first-of-type {
+  width: 49%;
+}
+
+ul.soc li:nth-child(2) {
+  background-color: #3fbdf3;
+  width: 49%;
+}
+
+ul.soc li:last-of-type {
+  background-color: #bf3483;
+  padding-left: 65px;
+  width: 100%;
+}
+
+ul.soc li:last-of-type i {
+  padding-left: 100px;
+  right: 75px;
+}
+
+ul.soc p {
+  color: white;
+  padding-left: 0px;
+  padding-top: 15px;
+  line-height: 0px;
+}
+
+div.face,
+div.twi {
+  height: 60px;
+  width: 100%;
+}
+
+i.face {
+  position: absolute;
+  right: 22px;
+  color: white;
+  font-size: 26px;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+ul.soc li:last-of-type {
+  padding-left: 125px;
+}
+
+div.gtav h1 {
+  background-color: var(--main-color);
+  width: 300px;
+  margin-left: auto;
+}
+
+div.gtav h1::before {
+  position: absolute;
+  width: 53%;
+  height: calc(100% + 36px);
+  top: -20px;
+  left: -53px;
+  transform: rotate(66deg);
+}
+
+ul.soc li {
+  width: unset;
+  text-align: center;
+}
+
+div.gtav {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.just {
+  overflow: hidden;
+  height: 100%;
+}
+
+div.gtav:hover img {
+  transform: scale(1.1);
+}
+
+div.gtav img {
+  position: relative;
+  transition: var(--main-transition);
+}
+
+div.play ul {
+  position: absolute;
+  top: 70px;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+}
+
+div.gtav .opacity {
+  position: absolute;
+  background-color: #00bd7f9e;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+div.gtav li {
+  color: rgba(241, 241, 241, 0.699);
+  padding-top: 10px;
+  font-size: 25px;
+  height: 19%;
+  text-align: center;
+}
+
+div.gtav li:nth-child(3) {
+  color: white;
+  font-weight: bold;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  div.gtav li {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  div.gtav li {
+    font-size: 15px;
+    height: 14%;
+  }
+
+  div.gtav ul {
+    top: 60px;
+  }
+}
+
+i.le,
+i.ri {
+  position: absolute;
+}
+
+i.le {
+  left: 0;
+}
+
+i.ri {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  i.le,
+  i.ri {
+    top: 50%;
+  }
+}
+/* end section ads */
+
+/* start section 3games */
+
+div.gamee3 {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+@media (max-width: 758px) {
+  div.gamee3 {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+div.gamee3 img {
+  height: 300px;
+}
+
+div.gamee3 h5 {
+  font-size: 30px;
+}
+
+div.gamee3 p {
+  line-height: 30px;
+}
+
+div.game1,
+div.game2,
+div.game3 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+div.text-game {
+  z-index: 20;
+  bottom: -80px;
+  text-align: right;
+  direction: rtl;
+  transition: var(--main-transition);
+}
+
+div.game1:hover div.text-game,
+div.game2:hover div.text-game,
+div.game3:hover div.text-game {
+  bottom: 0;
+}
+
+div.bullets div {
+  border-radius: 50%;
+  background-color: #3d3f42;
+  box-shadow: 0 1px 1px 0 black;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-top: 25px;
+  transform: scale(0.9);
+}
+
+div.bullets div:first-of-type {
+  transition: var(--main-transition);
+}
+
+div.bullets div:first-of-type:hover {
+  transform: scale(1.1);
+  background-color: #00bd7e73;
+}
+
+div.bullets div:last-of-type {
+  transform: scale(1.1);
+  margin-left: 5px;
+  background-color: var(--main-color);
+}
+
+/* end section 3games */
