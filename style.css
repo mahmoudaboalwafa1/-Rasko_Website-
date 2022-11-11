@@ -608,6 +608,12 @@ section.ads {
   padding: 70px 30px;
 }
 
+@media (max-width: 1102px) {
+  section.ads {
+    padding-bottom: 30px;
+  }
+}
+
 div.games {
   display: grid;
   grid-template-areas: "cry gtav gtav gtav";
