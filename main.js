@@ -13,3 +13,17 @@ cancel.onclick = () => {
   head.style.display = "none";
   icon_phone.style.display = "block";
 };
+
+let upp = document.getElementById("upp");
+
+window.onscroll = () => {
+  if (window.scrollY >= 300) {
+    upp.style.display = "block";
+  } else {
+    upp.style.display = "none";
+  }
+};
+
+upp.addEventListener("click", function () {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});

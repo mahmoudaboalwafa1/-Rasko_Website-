@@ -22,14 +22,14 @@
     />
     <!-- file bootstrap.min for bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <!-- style file for css main -->
-    <link rel="stylesheet" href="style.css" />
     <!-- for favicon css title -->
     <link rel="shortcut icon" href="./static/icon.png" type="image/x-icon" />
+    <!-- style file for css main -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- start navbar -->
-    <header class="row w-100">
+    <header class="row align-items-center">
       <i
         class="far fa-stream mopile menu-icon text-light pointer-event"
         id="icon"
@@ -153,13 +153,31 @@
             </li>
           </ul>
           <h1>اخبار علي السريع</h1>
-          <img
-            src="./static/Far-Cry-3-Vaas-Desktop-Wallpaper-780x470.jpg"
-            alt="Far-Cry-3-Vaas-Desktop-Wallpaper-780x470"
-          />
+          <div class="dog position-relative w-100">
+            <i class="fas fa-chevron-left left"></i>
+            <div class="opacity"></div>
+            <img
+              src="./static/Far-Cry-3-Vaas-Desktop-Wallpaper-780x470.jpg"
+              alt="Far-Cry-3-Vaas-Desktop-Wallpaper-780x470"
+              class="w-100 position-relative"
+            />
+            <div
+              class="text-cry rtl z-index-33 position-absolute w-100 text-end text-light"
+            >
+              <p>
+                <i class="far fa-clock"></i>
+                <span class="pe-4"> منذ 3 ايام</span>
+              </p>
+              <h2>خلال ايام ستكون قادر علي استخدام Xbox !</h2>
+            </div>
+            <i class="fas fa-chevron-right right"></i>
+          </div>
         </div>
         <div class="gtav">
-          <h1>اعلانات و فيديوهات الالعاب</h1>
+          <h1 class="bg-main">
+            اعلانات و فيديوهات الالعاب
+            <span class="fas fa-video"></span>
+          </h1>
           <i class="fas fa-chevron-left left le"></i>
           <div class="just">
             <div class="opacity"></div>
@@ -193,7 +211,9 @@
             alt="new-world-wallpaper-scaled-2-780x470"
             class="w-100"
           />
-          <div class="text-game w-100 position-absolute text-light pe-4 ps-4">
+          <div
+            class="text-game rtl z-index-33 w-100 position-absolute text-light pe-4 ps-4"
+          >
             <span>29 يوليو، 2021</span>
             <h5>مراجعة نسخة البيتا المُغلقة للعبة New World</h5>
             <p>
@@ -210,7 +230,9 @@
             alt="Scarlet-Nexus-780x470"
             class="w-100"
           />
-          <div class="text-game w-100 position-absolute text-light pe-4 ps-4">
+          <div
+            class="text-game rtl z-index-33 w-100 position-absolute text-light pe-4 ps-4"
+          >
             <span>15 يوليو، 2021</span>
             <h5>مراجعة لعبة Scarlet Nexus</h5>
             <p>
@@ -227,7 +249,9 @@
             alt="IT2PRE_XB1_PROMO_Keyart_1920x1080-780x470"
             class="w-100"
           />
-          <div class="text-game w-100 position-absolute text-light pe-4 ps-4">
+          <div
+            class="text-game rtl z-index-33 w-100 position-absolute text-light pe-4 ps-4"
+          >
             <span>منذ 3 ايام</span>
             <h5>مراجعة لعبة It Takes Two</h5>
             <p>
@@ -243,6 +267,290 @@
       </div>
     </section>
     <!-- end two section -->
+
+    <!-- start section top views -->
+    <section class="topviews ps-4 pe-4 pt-5 pb-5">
+      <h1
+        class="ms-auto text-light text-end fs-4 diplay-3 p-3 position-relative topp"
+      >
+        الاكثر مشاهدة <i class="fas fa-fire"></i>
+      </h1>
+      <div class="allviews d-flex justify-content-between">
+        <div class="views rtl text-light flex-grow-1">
+          <div class="view1 pb-5 d-flex">
+            <img src="./static/ESrowJNVAAkU1qV.jpg" alt="ESrowJNVAAkU1qV" />
+            <div class="view-text pe-3">
+              <span><i class="far fa-clock"></i>21 مايو 2021</span>
+              <p class="fs-4 pt-2">مواصفات تشغيل لعبة WARZONE</p>
+            </div>
+          </div>
+          <div class="view2 pb-5 d-flex">
+            <img
+              src="./static/WCCFgenshinimpact17-1536x864 (1).jpg"
+              alt="WCCFgenshinimpact17-1536x864"
+            />
+            <div class="view-text pe-3">
+              <span><i class="far fa-clock"></i>21 مايو 2021</span>
+              <p class="fs-4 pt-2">متطلبات تشغيل لعبة Genshin Impact</p>
+            </div>
+          </div>
+          <div class="view3 pb-5 d-flex">
+            <img
+              src="./static/Screenshot 2021-09-29 073221.png"
+              alt="ScreenShot 2021-09"
+            />
+            <div class="view-text pe-3">
+              <span><i class="far fa-clock"></i>21 مايو 2021</span>
+              <p class="fs-4 pt-2">AMD تطلق حسابًا رسميًا باللغة العربية</p>
+            </div>
+          </div>
+          <div class="view4 d-flex">
+            <img
+              src="./static/Battlefield-2042-hero-1-e1623301676618.jpg"
+              alt="Battlefield-2042-hero-1-e1623301676618"
+            />
+            <div class="view-text pe-3">
+              <span><i class="far fa-clock"></i>21 مايو 2021</span>
+              <p class="fs-4 pt-2">
+                سيتم تأجيل لعبة Battlefield 2042 حتى العام القادم
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="main-view position-relative">
+          <div class="opacity"></div>
+          <img src="./static/5.jpg" alt="5.jpg" />
+          <div
+            class="text-view-main rtl z-index-33 w-100 position-absolute text-white text-end pe-3"
+          >
+            <h1 class="ms-auto fs-6 diplay-3 p-2 position-relative">
+              مواصفات التشغيل
+            </h1>
+            <p class="fs-2">مواصفات تشغيل لعبة Valorant</p>
+            <ul class="acount d-grid">
+              <li><i class="fas fa-user-circle"></i>MaHmoudAboAlwafa</li>
+              <li><i class="fas fa-clock"></i> 3 مارس 2020</li>
+              <li><i class="fas fa-comments"></i>50</li>
+              <li class="redfire"><i class="fas fa-fire"></i>145,245</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section top views -->
+
+    <!-- start sports -->
+    <section class="sports pe-4 ps-4">
+      <h1
+        class="ms-auto text-light text-end fs-4 diplay-3 p-3 mb-4 position-relative topp"
+      >
+        رياضات الكترونيه <i class="fas fa-fire"></i>
+      </h1>
+      <div class="boxessport d-flex gap-4">
+        <div class="boxsport1">
+          <ul class="people text-light d-grid text-end w-100 me-auto">
+            <div class="d-flex gap-3">
+              <li class="redfire">190,000 <i class="fas fa-fire"></i></li>
+              <li>+99 <i class="fad fa-comments"></i></li>
+            </div>
+            <div class="d-flex gap-3">
+              <li>MahmoudAboAlwafa<i class="fas fa-user-circle"></i></li>
+              <li>منذ اسبوع <i class="far fa-clock"></i></li>
+            </div>
+          </ul>
+          <div class="read rtl">
+            <h1 class="text-light fs-3">
+              رقم قياسي جديد يُضاف للعبة Bloodhunt
+            </h1>
+            <p class="fs-5 pt-2">
+              أعلن فريق التطوير Mediatonic على الموقع الرسمي عن الرقم القياسي
+              الجديد الذي حققته لعبة Bloodhunt. حققت اللعبة رقمًا قياسيًا…
+            </p>
+            <button class="text-light p-3 fs-5">
+              اكمل القراءه <i class="far fa-angle-double-left"></i>
+            </button>
+          </div>
+        </div>
+        <div class="boxsport2 position-relative">
+          <!-- <div class="opacity position-absolute"></div> -->
+          <img
+            src="./static/vampire-the-masquerade-battle-royale.jpg"
+            alt="vampire-the-masquerade-battle-royale"
+            class="w-100 z-index-33 position-relative"
+          />
+          <div class="text-vambire z-index-33 position-absolute">
+            <button class="p-3 text-light">رياضات الكترونيه</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end sports -->
+
+    <!-- start last section -->
+    <section class="last-section pb-5">
+      <div class="boxes-last pt-4 gap-4 d-grid">
+        <div class="box-last">
+          <div class="events d-flex justify-content-between">
+            <p class="redfire">500<i class="fas fa-fire"></i></p>
+            <p>منذ يومين <i class="far fa-clock"></i></p>
+          </div>
+          <div class="whathappen d-flex text-light">
+            <div class="text-happen rtl pe-3">
+              <h1 class="fs-4">رقم قياسي جديد يُضاف للعبة Fall Guys</h1>
+              <p>
+                أعلن استوديو Arkane في بداية الشهر الماضي عن اكتمال مرحلة
+                التطوير لعبة…
+              </p>
+            </div>
+            <img src="./static/fall-guys-780x470.jpg" alt="fall-guys" />
+          </div>
+        </div>
+        <div class="box-last">
+          <div class="events d-flex justify-content-between">
+            <p class="redfire">25,000<i class="fas fa-fire"></i></p>
+            <p>منذ اسبوع<i class="far fa-clock"></i></p>
+          </div>
+          <div class="whathappen d-flex text-light">
+            <div class="text-happen rtl pe-3">
+              <h1 class="fs-4">متطلبات تشغيل لعبة Deathloop</h1>
+              <p>
+                قامت شركة Rogue Games بالإعلان رسميًا عن لعبة WipEout Rush
+                القادمة للأجهزة…
+              </p>
+            </div>
+            <img
+              src="./static/wp7578067-deathloop-2020-wallpapers-scaled-350x250.jpg"
+              alt="wp7578067-deathloop-2020-wallpapers-scaled-350x250"
+            />
+          </div>
+        </div>
+        <div class="box-last">
+          <div class="events d-flex justify-content-between">
+            <p class="redfire">25,250<i class="fas fa-fire"></i></p>
+            <p>منذ اسبوع<i class="far fa-clock"></i></p>
+          </div>
+          <div class="whathappen d-flex text-light">
+            <div class="text-happen rtl pe-3">
+              <h1 class="fs-4">مواصفات تشغيل لعبة Far Cry 6</h1>
+              <p>
+                مواصفات تشغيل لعبة Far Cry 6. توصي Ubisoft بتحميل Far Cry 6…
+              </p>
+            </div>
+            <img
+              src="./static/gameplay-far-cry-6-350x250.jpg"
+              alt="gameplay-far-cry-6-350x250"
+            />
+          </div>
+        </div>
+        <div class="box-last">
+          <div class="events d-flex justify-content-between">
+            <p class="redfire">20,000<i class="fas fa-fire"></i></p>
+            <p>منذ 4 ايام<i class="far fa-clock"></i></p>
+          </div>
+          <div class="whathappen d-flex text-light">
+            <div class="text-happen rtl pe-3">
+              <h1 class="fs-4">
+                رسميًا: سنرى ريماستر للعبة Alan Wake هذا العام
+              </h1>
+              <p>
+                قامت شركة Rogue Games بالإعلان رسميًا عن لعبة WipEout Rush
+                القادمة للأجهزة…
+              </p>
+            </div>
+            <img src="./static/capsule_616x353.jpg" alt="capsule_616x353" />
+          </div>
+        </div>
+        <div class="box-last">
+          <div class="events d-flex justify-content-between">
+            <p class="redfire">50<i class="fas fa-fire"></i></p>
+            <p>الان <i class="far fa-clock"></i></p>
+          </div>
+          <div class="whathappen d-flex text-light">
+            <div class="text-happen rtl pe-3">
+              <h1 class="fs-4">Konami تعلن عن إيقاف خوادمهم العام القادم!</h1>
+              <p>
+                أعلنت شركة Konami عن إيقاف خوادم Metal Gear Solid 5 خلال إعلان…
+              </p>
+            </div>
+            <img
+              src="./static/Screenshot 2021-09-29 083344.png"
+              alt="Screenshot"
+            />
+          </div>
+        </div>
+        <div class="box-last">
+          <div class="events d-flex justify-content-between">
+            <p class="redfire">5100<i class="fas fa-fire"></i></p>
+            <p>14 مارس,2021 <i class="far fa-clock"></i></p>
+          </div>
+          <div class="whathappen d-flex text-light">
+            <div class="text-happen rtl pe-3">
+              <h1 class="fs-4">
+                عرض للعبة الـ Battle Royal المجانية Bloodhunt
+              </h1>
+              <p>
+                أحد العروض أيضاً التي تم عرضها في حدث PlayStation Showcase 2021
+                هو…
+              </p>
+            </div>
+            <img src="./static/111084_600x338.jpg" alt="111084_600x338" />
+          </div>
+        </div>
+      </div>
+      <div class="download text-center pt-4 mb-2">
+        <button class="mt-4">تحميل المزيد</button>
+      </div>
+    </section>
+    <!-- end last section -->
+
+    <!-- start footer -->
+    <footer class="rtl w-100 ps-3 pe-3">
+      <div class="footter d-flex pt-4">
+        <div class="rasko pb-5">
+          <img src="./static/icon.png" alt="icon" />
+          <div class="text-light">
+            <h1>راسكو ويب</h1>
+            <p>
+              واحد من أكبر المجتمعات التقنية فى الشرق الأوسط تتحدث عن أحدث
+              التقنيات فى مجال الهاردوير والألعاب والهواتف
+            </p>
+            <h1 class="fs-5">تصميم محمود السيد<span> ( ابوالوفا) </span> ©</h1>
+          </div>
+        </div>
+        <div class="lists pb-5 text-light">
+          <h1 class="fs-5">القائمه</h1>
+          <div class="list d-flex">
+            <ul>
+              <li>العاب</li>
+              <li>سوفتوير</li>
+              <li>المزيد</li>
+              <li>ألعاب</li>
+            </ul>
+            <ul>
+              <li>قواعد البيانات</li>
+              <li>تكنولوجيا</li>
+              <li>هاردوير</li>
+              <li>رياضات إلكترونية</li>
+            </ul>
+          </div>
+        </div>
+        <div class="follows pb-5 text-light">
+          <h1 class="fs-4">تابعني علي</h1>
+          <div class="sociall d-flex fs-1 d-flex gap-3 pt-4">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bott" id="upp">
+      <button>
+        <i class="fas fa-angle-double-up"></i>
+      </button>
+    </div>
+    <!-- end footer -->
     <script src="./main.js"></script>
   </body>
 </html>
