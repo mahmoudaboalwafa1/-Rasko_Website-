@@ -1329,14 +1329,10 @@ footer h1 span {
   color: var(--main-color);
 }
 
-div.footter {
-  flex-wrap: wrap;
-}
-
 @media (max-width: 992px) {
   div.footter {
-    grid-template-areas: "rasko rasko rasko" "list list list" "follows follows follows";
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   div.lists {
